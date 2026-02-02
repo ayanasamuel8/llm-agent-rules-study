@@ -9,13 +9,20 @@
 **Setup Steps Taken:**
 1. Cloned repo: `git clone https://github.com/10xac/trp1-ai-artist.git`
 2. Copied `.env.example` to `.env` and added API keys.
-3. Installed dependencies: `pip install -r requirements.txt`
+3. Installed dependencies: `uv sync`
 4. Verified CLI: `uv run ai-content --help`
 5. Verified providers: `uv run ai-content list-providers`
 6. Verified presets: `uv run ai-content list-presets`
 
 **Issues Encountered & Resolution:**
-- _[Fill in if you faced any setup errors, e.g., API key issues, missing packages]_
+- Initially, the CLI (`uv run ai-content`) failed due to **Python version incompatibility**. The system required **Python 3.12+**, but the environment had Python 3.11 installed.
+- **Resolution:** Upgraded the Python version on the system to 3.12+. After that, `uv sync` successfully set up the environment, and all dependencies were installed.  
+- Verified working CLI commands:
+  ```bash
+  uv run ai-content --help
+  uv run ai-content list-providers
+  uv run ai-content list-presets
+  ```
 
 ---
 

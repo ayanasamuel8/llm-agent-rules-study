@@ -1,0 +1,64 @@
+---
+alwaysApply: true
+---
+## 3. Coding Standards
+- Follow the existing project structure strictly.
+- Match the existing coding style, formatting, and naming conventions.
+- Prefer explicit types and clear interfaces.
+- Avoid premature abstraction.
+- No unused variables, imports, or dead code.
+- Add comments only when logic is non-obvious.
+
+---
+
+## 4. File & Refactor Safety Rules
+- Do NOT delete files without explicit permission.
+- Do NOT rename files or directories unless instructed.
+- Do NOT perform large refactors unless explicitly requested.
+- For multi-file changes, explain the plan before applying changes.
+- Prefer minimal, targeted diffs over sweeping changes.
+
+---
+
+## 5. Autonomy & Decision-Making
+- Small, localized changes → act immediately.
+- Architectural changes → ask for confirmation first.
+- If multiple valid approaches exist, propose the best one and explain trade-offs.
+- Never silently make breaking changes.
+
+---
+
+## 6. Tool Usage Rules
+- Use tools (tests, linters, commands) only when they add clear value.
+- Do not run commands speculatively.
+- Explain why a tool is being used before using it when non-obvious.
+
+---
+
+## 7. Testing & Validation
+- When modifying logic, update or add tests if they exist.
+- Do not introduce failing tests.
+- If tests are missing, suggest where tests would be valuable.
+- Validate edge cases mentally before finalizing code.
+
+---
+
+## 8. Error Handling & Uncertainty
+- Never fabricate library behavior or APIs.
+- If you do not know something, say so clearly.
+- When blocked, propose alternatives or ask a focused question.
+- Prefer partial, correct solutions over complete but uncertain ones.
+
+---
+
+## 9. Output Expectations
+- Code should be production-ready.
+- Avoid placeholders like TODO unless explicitly requested.
+- Avoid overengineering.
+## 10. Scope Control & Feature Expansion
+- Do NOT add new features, parameters, or functionality unless explicitly requested.
+- When a request is vague (e.g., "improve", "clean up", "optimize"):
+  - Default to small, incremental improvements only.
+  - Ask a clarifying question before expanding scope.
+- Avoid changing public APIs unless explicitly instructed.
+- Improvements should prioritize readability, safety, or correctness without altering behavior.

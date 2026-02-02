@@ -1,64 +1,82 @@
 ---
 alwaysApply: true
 ---
+
+# Rules Overview
+These rules are designed based on **Boris Cherny’s programming patterns** (https://www.borischerny.com/) and general community best practices.  
+They emphasize clarity, safety, incremental change, and intentional action in code, while adapting these principles to our team’s workflow.
+
+---
+
 ## 3. Coding Standards
-- Follow the existing project structure strictly.
-- Match the existing coding style, formatting, and naming conventions.
-- Prefer explicit types and clear interfaces.
-- Avoid premature abstraction.
-- No unused variables, imports, or dead code.
-- Add comments only when logic is non-obvious.
+- Follow the existing project structure strictly.  # Cherny: prefer clear structure over clever abstractions
+- Match the existing coding style, formatting, and naming conventions.  # Cherny: clarity and consistency
+- Prefer explicit types and clear interfaces.  # Cherny: explicitness over implicit assumptions
+- Avoid premature abstraction.  # Cherny: avoid overengineering
+- No unused variables, imports, or dead code.  # Cherny: minimal, clean code
+- Add comments only when logic is non-obvious.  # Cherny: self-documenting code first
 
 ---
 
 ## 4. File & Refactor Safety Rules
-- Do NOT delete files without explicit permission.
-- Do NOT rename files or directories unless instructed.
-- Do NOT perform large refactors unless explicitly requested.
-- For multi-file changes, explain the plan before applying changes.
-- Prefer minimal, targeted diffs over sweeping changes.
+- Do NOT delete files without explicit permission.  # Cherny: incremental safety first
+- Do NOT rename files or directories unless instructed.  # Cherny: avoid sweeping changes
+- Do NOT perform large refactors unless explicitly requested.  # Cherny: small, reversible changes
+- For multi-file changes, explain the plan before applying changes.  # Cherny: communicate trade-offs
+- Prefer minimal, targeted diffs over sweeping changes.  # Cherny: incremental improvement
 
 ---
 
 ## 5. Autonomy & Decision-Making
-- Small, localized changes → act immediately.
-- Architectural changes → ask for confirmation first.
-- If multiple valid approaches exist, propose the best one and explain trade-offs.
-- Never silently make breaking changes.
+- Small, localized changes → act immediately.  # Cherny: local changes safe to commit
+- Architectural changes → ask for confirmation first.  # Cherny: avoid global, breaking changes
+- If multiple valid approaches exist, propose the best one and explain trade-offs.  # Cherny: transparency and rationale
+- Never silently make breaking changes.  # Cherny: safety and honesty
 
 ---
 
 ## 6. Tool Usage Rules
-- Use tools (tests, linters, commands) only when they add clear value.
-- Do not run commands speculatively.
-- Explain why a tool is being used before using it when non-obvious.
+- Use tools (tests, linters, commands) only when they add clear value.  # Cherny: intentional tool usage
+- Do not run commands speculatively.  # Cherny: avoid unnecessary side effects
+- Explain why a tool is being used before using it when non-obvious.  # Cherny: clarity and documentation
 
 ---
 
 ## 7. Testing & Validation
-- When modifying logic, update or add tests if they exist.
-- Do not introduce failing tests.
-- If tests are missing, suggest where tests would be valuable.
-- Validate edge cases mentally before finalizing code.
+- When modifying logic, update or add tests if they exist.  # Cherny: feedback-driven development
+- Do not introduce failing tests.  # Cherny: maintain correctness
+- If tests are missing, suggest where tests would be valuable.  # Cherny: proactive safety
+- Validate edge cases mentally before finalizing code.  # Cherny: think before committing
 
 ---
 
 ## 8. Error Handling & Uncertainty
-- Never fabricate library behavior or APIs.
-- If you do not know something, say so clearly.
-- When blocked, propose alternatives or ask a focused question.
-- Prefer partial, correct solutions over complete but uncertain ones.
+- Never fabricate library behavior or APIs.  # Cherny: honesty principle
+- If you do not know something, say so clearly.  # Cherny: admit uncertainty
+- When blocked, propose alternatives or ask a focused question.  # Cherny: problem-solving with transparency
+- Prefer partial, correct solutions over complete but uncertain ones.  # Cherny: incremental correctness
 
 ---
 
 ## 9. Output Expectations
-- Code should be production-ready.
-- Avoid placeholders like TODO unless explicitly requested.
-- Avoid overengineering.
+- Code should be production-ready.  # Cherny: pragmatic and safe code
+- Avoid placeholders like TODO unless explicitly requested.  # Cherny: clarity first
+- Avoid overengineering.  # Cherny: simplicity and readability
+
+---
+
 ## 10. Scope Control & Feature Expansion
-- Do NOT add new features, parameters, or functionality unless explicitly requested.
+- Do NOT add new features, parameters, or functionality unless explicitly requested.  # Cherny: explicit scope principle
 - When a request is vague (e.g., "improve", "clean up", "optimize"):
-  - Default to small, incremental improvements only.
-  - Ask a clarifying question before expanding scope.
-- Avoid changing public APIs unless explicitly instructed.
-- Improvements should prioritize readability, safety, or correctness without altering behavior.
+  - Default to small, incremental improvements only.  # Cherny: incremental change
+  - Ask a clarifying question before expanding scope.  # Cherny: communication first
+- Avoid changing public APIs unless explicitly instructed.  # Cherny: avoid breaking external contracts
+- Improvements should prioritize readability, safety, or correctness without altering behavior.  # Cherny: minimal effective improvement
+
+---
+
+# Adaptation Notes
+- While Cherny emphasizes safety and clarity, these rules adapt his patterns to our workflow by enforcing **minimal diffs, scoped changes, and explicit communication**.  
+- Testing rules were strengthened to align with our project’s test culture.  
+- Tool usage is restricted to purposeful actions to prevent speculative changes, following Cherny’s guidance on intentionality.  
+- Overall, this rules file reflects a **responsible, incremental, and transparent approach to code changes**, consistent with Cherny’s patterns but tailored to our team’s processes.

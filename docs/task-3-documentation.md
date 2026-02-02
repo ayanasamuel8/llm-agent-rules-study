@@ -226,3 +226,34 @@ By the end of this task:
 * The agent’s behavior aligns closely with my expectations and thought process
 
 This demonstrates effective control of an AI coding agent through well-designed, iteratively refined rules.
+
+## 6. Research & External Exploration
+
+To supplement my experiments, I consulted multiple external sources to understand best practices for AI coding agents, rules design, and prompt engineering.
+
+### Sources Consulted
+1. **Boris Cherny, Patterns for Responsible Programming**  
+   - Emphasized incremental changes, clarity, and safety in code.  
+   - Inspired my rules for scope control, refactor safety, and testing.
+
+2. **OpenAI Cookbook – Prompting & Agent Design**  
+   - Demonstrates the impact of explicit constraints on agent behavior.  
+   - Step-by-step reasoning in prompts improves reliability and reduces unintended changes.
+
+3. **GitHub repositories of AI coding assistants**  
+   - Observed common practices for handling vague prompts and limiting agent autonomy.  
+   - Noted trade-offs between fully autonomous vs. semi-supervised behavior.
+
+4. **Community discussions (Reddit r/PromptEngineering, AI Alignment Forum)**  
+   - Recommended logging intermediate outputs and asking clarifying questions to reduce errors.  
+   - Highlighted real-world risks of feature creep and API instability.
+
+### Key Learnings & Comparisons
+| Source / Tool          | Observation                                  | Application to My Rules                   |
+|------------------------|---------------------------------------------|------------------------------------------|
+| Boris Cherny’s patterns | Prioritize clarity, incremental changes     | Scope control, small diffs, refactor safety |
+| OpenAI Cookbook         | Explicit constraints improve predictability | Added ambiguity handling and feature expansion rules |
+| GitHub repos            | Multi-file changes require planning         | Added “explain plan before multi-file changes” rule |
+| Community threads       | Clarifying questions prevent unintended edits | Added explicit prompts for vague instructions |
+
+These external insights confirmed and enriched my own experiments. By combining personal testing with research, I designed rules that are **both practical and aligned with broader best practices**.
